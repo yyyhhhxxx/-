@@ -21,9 +21,9 @@ source requirements.sh
 ## 数据
 CS领域语料库采用采样无标注语料库 *AI Papers* (*S2ORC: The Semantic Scholar Open Research Corpus*, [paper](https://arxiv.org/abs/1911.02782)) 的一部分语料。`--dataset_name`对应`ai_unsup`。
 
-下游任务采样两个计算机领域的数据集，ACL-ARC (*Measuring the Evolution of a Scientific Field through Citation Frames*, [paper](https://aclanthology.org/Q18-1028/))和 SCIERC (*Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction*, [paper](https://arxiv.org/abs/1808.09602v1))，均为分类任务。
+下游任务采样两个计算机领域的数据集，ACL-ARC (*Measuring the Evolution of a Scientific Field through Citation Frames*, [paper](https://aclanthology.org/Q18-1028/))和 SCIERC (*Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction*, [paper](https://arxiv.org/abs/1808.09602v1))，均为分类任务。两个数据集的`--dataset_name`分别对应`acl_sup`和`sci_sup`。还提供对应的few shot数据集，对应`acl_fs`和`sci_fs`。
 
-语料库和数据集可从 [Google Drive link](https://drive.google.com/drive/folders/1xWHB5sXWe7L8I6UENroexo4PAoaFBocX?usp=share_link) 下载并解压，放在代码所在文件夹里。包含语料库`.txt`文件的文件夹、两个分别包含数据集`.jsonl`文件的文件夹一共三个文件夹均和代码同级。两个数据集的`--dataset_name`分别对应`acl_sup`和`sci_sup`。还提供对应的few shot数据集，对应`acl_fs`和`sci_fs`。
+语料库和数据集可从 [Google Drive link](https://drive.google.com/drive/folders/1xWHB5sXWe7L8I6UENroexo4PAoaFBocX?usp=share_link) 下载并解压，放在代码所在文件夹里。包含语料库`.txt`文件的文件夹、两个分别包含数据集`.jsonl`文件的文件夹一共三个文件夹均和代码同级。
 
 以上数据均由`dataHelper.py`处理，加载成`DatasetDict`形式。
 
