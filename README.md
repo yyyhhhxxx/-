@@ -10,6 +10,7 @@
 |jsonlines|3.1.0|
 |transformers|4.25.1|
 |torch|1.12.0|
+
 另外，本工作使用 [Weights & Biases](https://wandb.ai/site) 记录训练过程。
 
 首先需要自行安装PyTorch等，然后终端中运行如下命令安装所需要的dependencies。（如果不需要使用 Weights & Biases，请先删掉其中的 `pip install wandb` 和 `wandb login` ）（本工作在Linux上运行，对于不同的系统，请选择适合的方式运行`.sh`）
@@ -40,7 +41,7 @@ python get_new_tokenizer.py
 提供一些预训练模型[Google Drive link](https://drive.google.com/drive/folders/1L76Csml-jStahFMuWWAroE3EuL_FO2TK?usp=share_link)，将在后面说明。
 
 ## 训练
-本工作使用 Weights & Biases 记录训练过程，如不需要使用，请先删掉命令行中的`--report_to`以及代码`posttraining.py`和`finetuning.py`中的`wandb.init`。
+本工作使用 Weights & Biases 记录训练过程，如不需要使用，请先删掉命令行中的`--report_to`以及代码`posttraining.py`和`finetuning.py`中的`import wandb`和`wandb.init`。
 
 ### Run post training and finetuning
 在运行前请先设置好参数。
